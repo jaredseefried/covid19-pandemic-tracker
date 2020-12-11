@@ -7,6 +7,7 @@ import Info from '../components/Info'
 import News from '../components/News'
 import { Button } from "react-bootstrap"
 import API from '../utils/API'
+import { SolarSystemLoading } from 'react-loadingg';
 
 function markerTooltipRenderer(marker) {
   return `Country: ${marker.country}`;
@@ -23,6 +24,8 @@ function Globe() {
     // markerType: 'bar',
     markerRadiusScaleRange: [0.01, 0.03],
   };
+
+  const [loading, setLoading] = useState(false)
 
   const [markers, setMarkers] = useState([])
 
@@ -112,6 +115,7 @@ function Globe() {
           })
         }
         setMarkers(markersData)
+        setLoading(true)
       }).catch(function (error) {
         console.error(error);
       });
@@ -241,7 +245,8 @@ function Globe() {
       console.log("hello")
   }
   return (
-    <>
+    <div>
+      {loading ? (<>
       { markers.length > 0 && (
         <div className="globe">
           <div className="continents-container">
@@ -274,7 +279,14 @@ function Globe() {
           />
         </div>
       )}
-    </>
+    </>):(<SolarSystemLoading
+    color= "#8e0000"
+    className="background"/>)}
+
+
+    </div>
+    
+    
   );
 
 }
