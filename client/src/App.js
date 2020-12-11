@@ -1,16 +1,19 @@
 import React from "react";
-import { SolarSystemLoading } from 'react-loadingg';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Globe from "./pages/Globe";
+import Splash from './pages/splash'
+
 
 
 function App() {
   return (
-   
-      <div className="App">
-        <SolarSystemLoading />
-        <Globe />
-      </div>
+    <Router>
+    <div className="App">
+      <Route exact path ="/" component={Splash}/>
+      <Route exact path ="/globe" component={Globe}/>
+    </div>
+  </Router>
 
   );
 }
