@@ -166,7 +166,9 @@ button.continent:hover {
   width: 400px;
   position: absolute;
   top: 100px;
-  right: 0;
+  right: 20px;
+  background-color: #ffffff99;
+  border-radius: 5px; 
 }
 
 .input-group-text {
@@ -182,6 +184,6 @@ button.continent:hover {
 
 /* cityInfo */
 
-.city-info-container {
- color: white;
+.btn-secondary{
+  width: 100%;
 }
