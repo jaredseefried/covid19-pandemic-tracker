@@ -5,7 +5,8 @@ import "tippy.js/animations/scale.css";
 import defaultMarkers from "../../src/markers";
 import Info from '../components/Info'
 import News from '../components/News'
-import { Button } from "react-bootstrap"
+import Search from '../components/Search'
+// import { Button } from "react-bootstrap"
 import API from '../utils/API'
 import { SolarSystemLoading } from 'react-loadingg';
 
@@ -28,12 +29,6 @@ function Globe() {
   const [loading, setLoading] = useState(false)
 
   const [markers, setMarkers] = useState([])
-
-  // const [dataFinished, setDataFinished] = useState(false)
-
-  // const [coordinates, setCoordinates] = useState({
-  //   coordinates: []
-  // })
 
   const [info, setInfo] = useState({
     country: "",
@@ -156,15 +151,15 @@ function Globe() {
       })
   }
 
-  function getMongoDB(){
+  function getMongoDB() {
     API.getMarker()
-    .then((response)=>{
-      const data = response.data
-      console.log(data)
-    })
-    .catch((error)=>{
-      console.log(error);
-    })
+      .then((response) => {
+        const data = response.data
+        console.log(data)
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }
 
   switch (animationSequence) {
@@ -245,48 +240,56 @@ function Globe() {
       console.log("hello")
   }
   return (
-    <div>
+    <div className="container-fluid col-12 globe-container">
       {loading ? (<>
-      { markers.length > 0 && (
-        <div className="globe">
-          <div className="continents-container">
-            <h2 className="continent" onClick={() => setAnimationSequence('northAmerica')}>North America</h2>
-            <h2 className="continent" onClick={() => setAnimationSequence('southAmerica')}>South America</h2>
-            <h2 className="continent" onClick={() => setAnimationSequence('europe')}>Europe</h2>
-            <h2 className="continent" onClick={() => setAnimationSequence('africa')}>Africa</h2>
-            <h2 className="continent" onClick={() => setAnimationSequence('asia')}>Asia</h2>
-            <h2 className="continent" onClick={() => setAnimationSequence('australia')}>Australia</h2>
-            <h2 className="continent" onClick={() => setAnimationSequence('antartica')}>Antarctica</h2>
+        { markers.length > 0 && (
+          <div className="globe">
+            <div className="continents-container">
+              <h2 className="continent" onClick={() => setAnimationSequence('northAmerica')}>North America</h2>
+              <h2 className="continent" onClick={() => setAnimationSequence('southAmerica')}>South America</h2>
+              <h2 className="continent" onClick={() => setAnimationSequence('europe')}>Europe</h2>
+              <h2 className="continent" onClick={() => setAnimationSequence('africa')}>Africa</h2>
+              <h2 className="continent" onClick={() => setAnimationSequence('asia')}>Asia</h2>
+              <h2 className="continent" onClick={() => setAnimationSequence('australia')}>Australia</h2>
+              <h2 className="continent" onClick={() => setAnimationSequence('antartica')}>Antarctica</h2>
+            </div>
+
+            <div className="news-container col-12">
+              <div className="row">
+                {getCovidNews.map(article => (
+                  <News
+                    {...article}
+                    key={article.title} />
+                ))}
+              </div>
+            </div>
+
+            <Search />
+
+            <ReactGlobe
+              markers={markers}
+              options={options}
+              onClickMarker={onClickMarker}
+              animations={animations}
+              height="120vh"
+            />
+            <Info
+              country={info.country}
+              infected={info.infected}
+              deaths={info.deaths}
+              recoveries={info.recoveries}
+            />
+
           </div>
-          <div className="news-container">
-            {getCovidNews.map(article => (
-              <News
-                {...article}
-                key={article.title} />
-            ))}
-          </div>
-          <ReactGlobe
-            markers={markers}
-            options={options}
-            onClickMarker={onClickMarker}
-            animations={animations}
-          />
-          <Info
-            country={info.country}
-            infected={info.infected}
-            deaths={info.deaths}
-            recoveries={info.recoveries}
-          />
-        </div>
-      )}
-    </>):(<SolarSystemLoading
-    color= "#8e0000"
-    className="background"/>)}
+        )}
+      </>) : (<SolarSystemLoading
+        color="#8e0000"
+        className="background" />)}
 
 
     </div>
-    
-    
+
+
   );
 
 }
