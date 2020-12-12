@@ -182,8 +182,17 @@ button.continent:hover {
   border-radius: 5px;
 }
 
-/* cityInfo */
+/* stateInfo */
 
 .btn-secondary{
   width: 100%;
+}
+
+.state-info-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.state-info{
+  font-size: 17px;
 }
