@@ -139,11 +139,16 @@ body {
   float: left;
   margin: 27px;
   color: whitesmoke;
+  width: auto;
+  padding: 14px;
 }
 
 .continent:hover {
-  color: #00bcd4;
+  color: white;
   cursor: pointer;
+  background-color: #00bcd4d4;
+  border-radius: 5px;
+  padding: 14px;
 }
 
 button.continent {
@@ -173,6 +178,11 @@ button.continent:hover {
 
 .input-group-text {
   height: 31px;
+}
+
+.btn-secondary, .btn-secondary:active, .btn-secondary:focus  {
+  background: #00bcd4d4;
+  border: none;
 }
 
 .dropdown-menu {
