@@ -6,6 +6,7 @@ import defaultMarkers from "../../src/markers";
 import Info from '../components/Info'
 import News from '../components/News'
 import Search from '../components/Search'
+import CDC from '../components/CDC'
 // import { Button } from "react-bootstrap"
 import API from '../utils/API'
 import { SolarSystemLoading } from 'react-loadingg';
@@ -34,7 +35,8 @@ function Globe() {
     country: "",
     infected: 0,
     deaths: 0,
-    recoveries: 0
+    recoveries: 0,
+    updated: ""
   })
 
   const [animationSequence, setAnimationSequence] = useState()
@@ -106,7 +108,8 @@ function Globe() {
             country: (covidData[0].Country_text),
             infected: (covidData[0]["Total Cases_text"]),
             deaths: (covidData[0]["Total Deaths_text"]),
-            recoveries: (covidData[0]["Total Recovered_text"])
+            recoveries: (covidData[0]["Total Recovered_text"]),
+            updated: (covidData[0]["Last Update"])
           })
         }
         setMarkers(markersData)
@@ -130,7 +133,8 @@ function Globe() {
               country: (covidData[i].Country_text),
               infected: (covidData[i]["Total Cases_text"]),
               deaths: (covidData[i]["Total Deaths_text"]),
-              recoveries: (covidData[i]["Total Recovered_text"])
+              recoveries: (covidData[i]["Total Recovered_text"]),
+              updated: (covidData[i]["Last Update"])
             })
           }
         }
@@ -278,7 +282,10 @@ function Globe() {
               infected={info.infected}
               deaths={info.deaths}
               recoveries={info.recoveries}
+              updated={info.updated}
             />
+
+            <CDC />
 
           </div>
         )}

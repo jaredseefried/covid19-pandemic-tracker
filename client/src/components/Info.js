@@ -8,6 +8,7 @@ function Info(props) {
       <h3 className="info">Infected: {props.infected}</h3>
       <h3 className="info">Deaths: {props.deaths}</h3>
       <h3 className="info">Recoveries: {props.recoveries}</h3>
+      <h3 className="info">Last Updated: {props.updated}</h3>
     </div>
   )
 }
