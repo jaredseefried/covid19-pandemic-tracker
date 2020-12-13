@@ -30,7 +30,7 @@ export default {
   getNews: function(){
     return axios({
       method: 'GET',
-      url: 'https://gnews.io/api/v4/search?q=covid&country=us&max=4&token=9e746013df81c5af1da62a1daa5e44d3'
+      url: 'https://gnews.io/api/v4/search?q=covid&country=us&max=2&token=9e746013df81c5af1da62a1daa5e44d3'
     })
   },
 
