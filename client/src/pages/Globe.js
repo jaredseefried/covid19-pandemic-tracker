@@ -42,10 +42,10 @@ function Globe() {
   const [animationSequence, setAnimationSequence] = useState();
   let animations = [];
   useEffect(() => {
-    loadData();
-    getNews();
-    getMongoDB();
-  }, []);
+    loadData()
+    getNews()
+    getMongoDB()
+  }, [])
 
   function formatCountryValues(covidCountryValue, countryName, covidColor) {
     if (countryName) {
@@ -297,22 +297,13 @@ function Globe() {
                 </h2>
               </div>
 
-              <div className="news-container col-12">
-                <div className="row">
-                  {getCovidNews.map((article) => (
-                    <News {...article} key={article.title} />
-                  ))}
-                </div>
-              </div>
-
-              <Search />
-
               <ReactGlobe
                 markers={markers}
                 options={options}
                 onClickMarker={onClickMarker}
                 animations={animations}
                 height="120vh"
+                className="react-globe"
               />
               <Info
                 country={info.country}
@@ -322,17 +313,27 @@ function Globe() {
                 updated={info.updated}
               />
 
+              <Search />
+
+              <div className="news-container col-12">
+                <div className="row">
+                  {getCovidNews.map((article) => (
+                    <News {...article} key={article.title} />
+                  ))}
+                </div>
+              </div>
+
               <CDC />
             </div>
           )}
         </>
       ) : (
-        <div className="loader">
-          {" "}
+          <div className="loader">
+            {" "}
           (
-          <SolarSystemLoading color="#8e0000" className="background" />)
-        </div>
-      )}
+            <SolarSystemLoading color="#8e0000" className="background" />)
+          </div>
+        )}
     </div>
   );
 }

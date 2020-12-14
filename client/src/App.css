@@ -46,7 +46,7 @@ body {
 
 .globe {
   width: 100%;
-  height: 100%px;
+  height: 100%;
 }
 
 .splash {
@@ -58,7 +58,7 @@ body {
 
 .news-container {
   position: absolute;
-  top: 310px;
+  top: 400px;
   left: 20px;
   width: 350px;
 }
@@ -100,7 +100,7 @@ body {
   left: 20px;
   color: black;
   background: #ffffff99;
-  height: 193px;
+  height: 252px;
   width: 332px;
   font-size: 14px;
   border-radius: 5px;
@@ -108,17 +108,34 @@ body {
 
 .info-title {
   width: auto;
-  margin: 15px 0px;
+  padding: 5px 0px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
+  color: white;
+  background: #00bcd4d4;
+  height: 47px;
+  /* margin-top: 10px; */
+  text-shadow: 1px 1px 1px black;
+  border-radius: 5px;
 }
 
 .info {
   margin-top: 4%;
-  ;
   text-align: left;
-  padding-left: 14px;
-  font-size: 17px;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+  padding: 8px 14px;
+}
+
+.api-link {
+  text-align: left;
+  margin-left: 12px;
+  padding-top: 5px;
+}
+
+.info-updated {
+  font-size: 14px;
+  /* border-bottom: none; */
 }
 
 /* Continents Container */
@@ -161,8 +178,6 @@ button.continent:hover {
   color: black;
 }
 
-
-
 /* Search */
 
 .search-container {
@@ -178,7 +193,7 @@ button.continent:hover {
   height: 31px;
 }
 
-.btn-secondary, .btn-secondary:active, .btn-secondary:focus  {
+.btn-secondary, .btn-secondary:active, .btn-secondary:focus {
   background: #00bcd4d4;
   border: none;
 }
@@ -214,14 +229,15 @@ button.continent:hover {
   text-align: left;
   padding-left: 3px;
   font-size: 17px;
+  height: 240px;
 }
 
 /* CDC Container */
 
 .cdc-container {
   width: 332px;
-  position: absolute;
-  bottom: 347px;
+  position: fixed;
+  bottom: 15px;
   right: 20px;
   background-color: #ffffff99;
   border-radius: 5px;
@@ -236,4 +252,42 @@ button.continent:hover {
 
 .loader {
   margin-top: 350px;
+}
+
+@media only screen and (max-width: 600px) {
+  .info-container {
+    position: inherit;
+    /* top: 100px; */
+    /* left: 20px; */
+    color: black;
+    background: #ffffff99;
+    height: 252px;
+    width: 332px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  .news-container {
+    position: inherit;
+    margin-top: 15px;
+  }
+  .cdc-container {
+    position: inherit;
+  }
+  .search-container {
+    position: inherit;
+    width: 332px;
+    /* position: absolute; */
+    /* top: 100px; */
+    /* right: 20px; */
+    background-color: #ffffff99;
+    border-radius: 5px;
+    margin-top: 18px;
+  }
+  .continents-container {
+    position: absolute;
+    width: 57%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 265px;
+  }
 }
