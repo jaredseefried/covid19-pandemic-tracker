@@ -161,9 +161,7 @@ button.continent:hover {
   color: black;
 }
 
-.background {
-  background-color: #343c40;
-}
+
 
 /* Search */
 
@@ -234,4 +232,8 @@ button.continent:hover {
   font-size: 14px;
   text-align: left;
   padding: 10px;
+}
+
+.loader {
+  margin-top: 350px;
 }
