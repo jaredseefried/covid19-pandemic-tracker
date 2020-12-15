@@ -26,7 +26,7 @@ function Info(props) {
           <td className="info">{props.updated}</td>
         </tr>
         <tr>
-          <td><p className="api-link"><a href="https://rapidapi.com/slotixsro-slotixsro-default/api/covid-19-tracking/endpoints" target="_blank" rel="noreffer">API</a> </p></td>
+          <td><p className="api-link"><a className="api" href="https://rapidapi.com/slotixsro-slotixsro-default/api/covid-19-tracking/endpoints" target="_blank" rel="noreffer">API</a> </p></td>
           
         </tr>
       </table>
