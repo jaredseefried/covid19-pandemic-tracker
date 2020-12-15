@@ -43,7 +43,7 @@ function Globe() {
   let animations = [];
   useEffect(() => {
     loadData()
-    getNews()
+    // getNews()
     getMongoDB()
   }, [])
 
