@@ -42,7 +42,7 @@ function Globe() {
   let animations = [];
   useEffect(() => {
     loadData()
-    getNews()
+    // getNews()
     getMongoDB()
   }, [])
 
@@ -305,14 +305,11 @@ function Globe() {
                 className="react-globe"
               />
               <Info
-                
-                country={<AnimateOnChange  animationClassName = "info-fade" animate={info.country}>
-                  {info.country}
-                </AnimateOnChange> }
-                infected={<AnimateOnChange animationClassName = "info-fade" animate={info.infected}>{info.infected}</AnimateOnChange>}
-                deaths={<AnimateOnChange animationClassName = "info-fade" animate={info.deaths}>{info.deaths}</AnimateOnChange>}
-                recoveries={<AnimateOnChange animationClassName = "info-fade" animate={info.recoveries}>{info.recoveries}</AnimateOnChange>}
-                updated={<AnimateOnChange animationClassName = "info-fade" animate={info.updated}>{info.updated}</AnimateOnChange>}
+                country={info.country}
+                infected={<AnimateOnChange animationClassName="info-fade" animate={info.infected}>{info.infected}</AnimateOnChange>}
+                deaths={<AnimateOnChange animationClassName="info-fade" animate={info.deaths}>{info.deaths}</AnimateOnChange>}
+                recoveries={<AnimateOnChange animationClassName="info-fade" animate={info.recoveries}>{info.recoveries}</AnimateOnChange>}
+                updated={<AnimateOnChange animationClassName="info-fade" animate={info.updated}>{info.updated}</AnimateOnChange>}
               />
 
               <Search />

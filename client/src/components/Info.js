@@ -1,11 +1,12 @@
 import React from 'react'
+import Moment from 'react-moment';
 
 function Info(props) {
   return (
     <div className="info-container">
       <h1 className="info-title">{props.country}</h1>
 
-      <table>
+      <table className="info-table">
         <tr>
           <th></th>
         </tr>
@@ -23,11 +24,10 @@ function Info(props) {
         </tr>
         <tr>
           <td className="info">Updated:</td>
-          <td className="info">{props.updated}</td>
+          <td className="info"><Moment format="MM/DD/YYYY">{props.updated}</Moment></td>
         </tr>
         <tr>
           <td><p className="api-link"><a className="api" href="https://rapidapi.com/slotixsro-slotixsro-default/api/covid-19-tracking/endpoints" target="_blank" rel="noreffer">API</a> </p></td>
-          
         </tr>
       </table>
     </div>

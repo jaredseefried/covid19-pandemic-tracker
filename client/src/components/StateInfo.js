@@ -1,9 +1,10 @@
 import React from 'react'
+import Moment from 'react-moment';
 
 function StateInfo(props) {
   return (
     <div className="state-info">
-      <table>
+      <table className="state-table">
         <tr>
           <th></th>
         </tr>
@@ -25,7 +26,7 @@ function StateInfo(props) {
         </tr>
         <tr>
           <td className="info">Updated:</td>
-          <td className="info info-updated">{props.updated}</td>
+          <td className="info"><Moment format="MM/DD/YYYY">{props.updated}</Moment></td>
         </tr>
         <tr>
           <td><p className="api-link"><a className="api" href="https://covidtracking.com/data/api" target="_blank" rel="noreffer">API</a> </p></td>
