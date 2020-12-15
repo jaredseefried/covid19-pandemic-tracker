@@ -101,7 +101,7 @@ body {
   color: black;
   background: #ffffff99;
   height: 252px;
-  width: auto;
+  width: 300px;
   font-size: 14px;
   border-radius: 5px;
 }
@@ -110,14 +110,13 @@ body {
   width: auto;
   padding: 5px 0px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   background: #00bcd4d4;
   height: 47px;
   text-shadow: 1px 1px 1px black;
   border-radius: 5px;
   border-bottom: none;
- 
 }
 
 .info {
@@ -125,8 +124,13 @@ body {
   text-align: left;
   font-size: 16px;
   border-bottom: 1px solid black;
-  padding: 8px 14px;
+  padding: 8px 0px;
   opacity: 1;
+}
+
+.info-table{
+  width: 92%;
+  margin: 0 auto;
 }
 
 .api-link {
@@ -233,6 +237,10 @@ button.continent:hover {
   height: 240px;
 }
 
+.state-table{
+  width: 100%;
+}
+
 /* CDC Container */
 
 .cdc-container {
@@ -268,17 +276,14 @@ button.continent:hover {
     border-radius: 5px;
     margin: 0 auto;
   }
-
   .news-container {
     position: inherit;
     margin-top: 15px;
   }
-
   .cdc-container {
     position: inherit;
     margin: 0 auto;
   }
-
   .search-container {
     position: inherit;
     width: 332px;
@@ -286,7 +291,6 @@ button.continent:hover {
     border-radius: 5px;
     margin-top: 18px;
   }
-  
   .continents-container {
     position: absolute;
     width: 57%;
@@ -297,18 +301,27 @@ button.continent:hover {
 }
 
 .info-fade {
-  animation: example 2s;
-    
-
-    
-  
+  animation: example .2s;
 }
 
 @keyframes example {
-  from {background-color:black; border-bottom: none; border-radius: 5px; color: white;}
-  to {background-color:inherit; border-bottom: none; border-radius: 5px; color: black}
+  from {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(50, 241, 255, 0.404);
+    color: black;
+    padding: 0px 10px;
+  }
+  to {
+    background-color: inherit;
+    border-radius: 5px;
+    background-color: rgba(50, 241, 255, 0.404);
+    color: rgb(0, 0, 0);
+    padding: 0px 10px;
+    
+  }
 }
 
-.api{
+.api {
   font-size: 12px;
 }
