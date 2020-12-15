@@ -28,7 +28,7 @@ function StateInfo(props) {
           <td className="info info-updated">{props.updated}</td>
         </tr>
         <tr>
-          <td><p className="api-link"><a href="https://covidtracking.com/data/api" target="_blank" rel="noreffer">API</a> </p></td>
+          <td><p className="api-link"><a className="api" href="https://covidtracking.com/data/api" target="_blank" rel="noreffer">API</a> </p></td>
           
         </tr>
       </table>

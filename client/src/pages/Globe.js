@@ -9,6 +9,7 @@ import Search from "../components/Search";
 import CDC from "../components/CDC";
 import API from "../utils/API";
 import { SolarSystemLoading } from "react-loadingg";
+import AnimateOnChange from 'react-animate-on-change'
 
 function markerTooltipRenderer(marker) {
   return `Country: ${marker.country}`;
@@ -304,11 +305,14 @@ function Globe() {
                 className="react-globe"
               />
               <Info
-                country={info.country}
-                infected={info.infected}
-                deaths={info.deaths}
-                recoveries={info.recoveries}
-                updated={info.updated}
+                
+                country={<AnimateOnChange  animationClassName = "info-fade" animate={info.country}>
+                  {info.country}
+                </AnimateOnChange> }
+                infected={<AnimateOnChange animationClassName = "info-fade" animate={info.infected}>{info.infected}</AnimateOnChange>}
+                deaths={<AnimateOnChange animationClassName = "info-fade" animate={info.deaths}>{info.deaths}</AnimateOnChange>}
+                recoveries={<AnimateOnChange animationClassName = "info-fade" animate={info.recoveries}>{info.recoveries}</AnimateOnChange>}
+                updated={<AnimateOnChange animationClassName = "info-fade" animate={info.updated}>{info.updated}</AnimateOnChange>}
               />
 
               <Search />
