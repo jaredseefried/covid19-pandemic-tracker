@@ -7,7 +7,6 @@ import Info from "../components/Info";
 import News from "../components/News";
 import Search from "../components/Search";
 import CDC from "../components/CDC";
-// import { Button } from "react-bootstrap"
 import API from "../utils/API";
 import { SolarSystemLoading } from "react-loadingg";
 import AnimateOnChange from 'react-animate-on-change'
@@ -24,7 +23,6 @@ function Globe() {
     ambientLightColor: "red",
     globeGlowColor: "blue",
     cameraDistanceRadiusScale: 4,
-    // markerType: 'bar',
     markerRadiusScaleRange: [0.01, 0.03],
   };
 
