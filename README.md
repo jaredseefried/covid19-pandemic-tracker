@@ -8,7 +8,7 @@
 # Description
 Users are able to select a country on a globe and the COVID19 statistics are displayed in a box in the top left corner. The data is generated through an API and is frequently updated. The data provided shows how many COVID19 cases have been reported, recoveries, and deaths. With React hooks, the data gets updated upon selecting a new country on the form. In the top right corner is data from a second API that uses US Data by State. Users can select a state from a drop-down menu to view COVID19 statistics for that state. Links to both APIs are included in the application. An additional API generates news articles about COVID19 and is also updated daily. 
 
-## Deployed Site @ https://pandemic-tracking.herokuapp.com/globe 
+## Deployed Site @ https://covid19-pandemic-tracker.herokuapp.com/
 ---
 ![Image of the main page](./client/src/images/pandemic-tracker.jpg)
 
