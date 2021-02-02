@@ -1,19 +1,15 @@
 # My Pandemic Tracker
-All of your COVID-19 data and news thrown into one place. 
-You can see the infection and death rates for many of the countries around the globe.
-You are also shown the most recent news regarding COVID-19.
+## Table of Contents
 
-# Table of Contens
-1. [Motivation](#motivation)
-2. [Screenshot](#screenshot)
-3. [Technology Used](#technology-used)
-4. [Features](#features)
+- **[Description](#Description)**
+- **[Installation Requirements](#Installation-Requirements)**
+- **[License](#License)**
+- **[Questions](#Questions)**
+# Description
+Users are able to select a country on a globe and the COVID19 statistics are displayed in a box in the top left corner. The data is generated through an API and is frequently updated. The data provided shows how many COVID19 cases have been reported, recoveries, and deaths. With React hooks, the data gets updated upon selecting a new country on the form. In the top right corner is data from a second API that uses US Data by State. Users can select a state from a drop-down menu to view COVID19 statistics for that state. Links to both APIs are included in the application. An additional API generates news articles about COVID19 and is also updated daily. 
 
-# Motivation
-With COVID-19 being something that is so prevelant now and it's clear that this won't be leaving anytime soon we wanted to make something that could keep people informed.
-This brought the idea of making My Pandemic Tracker. Using many technologies we made an app that updates real-time on the current infection rates along with the recent news on COVID-19.
-
-# Screenshot
+## Deployed Site @ https://pandemic-tracking.herokuapp.com/globe 
+---
 ![Image of the main page](./client/src/images/pandemic-tracker.jpg)
 
 # Technology Used
@@ -29,7 +25,6 @@ This brought the idea of making My Pandemic Tracker. Using many technologies we 
 * [Bootstrap](https://getbootstrap.com/)
 * [Particles](https://vincentgarreau.com/particles.js/)
 
-# Features
-* Real-time updates on the infection rates of COVID-19
-* A globe the user can go around to select a specific country
-* Real-time news updates about COVID-19 from google
+# Installation Requirements 
+
+1. Clone my portfolio in the command line by entering: git clone https://github.com/jaredseefried/my-portfolio.git
