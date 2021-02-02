@@ -161,7 +161,7 @@ function Globe() {
     API.getMarker()
       .then((response) => {
         const data = response.data;
-        console.log(data);
+        // console.log(data);
       })
       .catch((error) => {
         console.log(error);
@@ -243,7 +243,7 @@ function Globe() {
       animations = [];
       break;
     default:
-      console.log("hello");
+      // console.log("hello");
   }
   return (
     <div className="container-fluid col-12">
