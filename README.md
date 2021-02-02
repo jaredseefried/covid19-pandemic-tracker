@@ -23,8 +23,21 @@ Users are able to select a country on a globe and the COVID19 statistics are dis
 * [React Globe](https://react-globe.netlify.app/)
 * [Axios](https://www.npmjs.com/package/axios)
 * [Bootstrap](https://getbootstrap.com/)
-* [Particles](https://vincentgarreau.com/particles.js/)
 
 # Installation Requirements 
 
-1. Clone my portfolio in the command line by entering: git clone https://github.com/jaredseefried/my-portfolio.git
+1. Clone my portfolio in the command line by entering: git clone https://github.com/jaredseefried/covid19-pandemic-tracker.git 
+
+2. Install required libraries from entering in the command line: npm install
+
+3. Start the application by entering in the command line: npm start
+
+# License
+
+MIT
+
+# Have Questions?
+
+## [Github Profile: github.com/jaredseefried](https://github.com/jaredseefried "Title")
+
+Please email me at jared.seefried@yahoo.com if you have additional questions.
